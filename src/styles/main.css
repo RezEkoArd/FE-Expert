@@ -1,0 +1,455 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  display: block;
+}
+
+.mainColor {
+  background-color: #1C6758;
+}
+
+.secondColor {
+  background-color: #3D8361;
+}
+
+.thirdColor {
+  background-color: #D6CDA4;
+}
+
+.softColor {
+  background-color: #EEF2E6;
+}
+
+
+nav{
+  padding: 15px 5%;
+  display: flex;
+  background-color: #1C6758;
+  color: #EEF2E6;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__list{
+  display: flex;
+  gap: 6em;
+  font-size: 20px;
+  list-style-type:none;
+  justify-content: flex-end;
+}
+
+ a{
+  text-decoration: none;
+  color: #EEF2E6;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Hamburger menu */
+
+.header__menu{
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  background-color: #1C6758;
+  color: white;
+  border: none;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .header__menu {
+    display: inline-block;
+  }
+  
+  .nav__list {
+    display: none;
+  }
+  
+  #drawer {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  #drawer li {
+    margin: 10px 0;
+  }
+  
+  #drawer li a {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3D8361;
+  }
+  
+  #drawer.active {
+    display: block;
+  }
+}
+
+/* Jumbotron */
+
+.jumbotron {
+  position: relative;
+  height: 500px;
+  background-color: #D6CDA4;
+  overflow: hidden;
+}
+.jumbotron img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+.jumbotron .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: #EEF2E6;
+}
+.jumbotron h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.jumbotron p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+
+/* List Restaurant */
+
+.list-restaurant{
+  padding: 15px 5%;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.list-restaurant h1{
+  font-size: 2em;
+  font-weight: bold;
+  color: #1C6758
+}
+
+.list-restaurant .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 30px;
+}
+
+.card {
+  width: 350px;
+  height: 480px;
+  border: solid 1px #3D8361;
+  border-radius: 10px;
+}
+
+.card .card-img {
+  width: 100%;
+  height: 250px;
+  border-bottom: solid 1px; 
+}
+
+.card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card .card-desc {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:clip;
+  width: 250px;
+}
+
+.card .card-desc h2{
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.card .card-desc h3{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card .card-desc .description{
+  font-size: 14px;
+  font-weight:400;
+}
+
+
+.card .button_card a {
+  width: 100%;
+  border-radius: 25px;
+  padding: 8px 0 8px 25px;
+  font-weight: 500;
+  color: #EEF2E6;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  background-color: #3D8361;
+}
+
+.card a:hover {
+  color: #000;
+}
+
+/* Detail Page */
+
+.detail-page {
+  padding: 15px 5%;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.detail-page h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1C6758
+}
+
+.detail-desc {
+  margin: 10px 0 10px 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.desc-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-desc .img-detail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detail-desc .desc-section .city{
+  font-weight: 700;
+  color: #000;
+  font-size: 18px;
+}
+
+.detail-desc .desc-section .address{
+  font-weight: 500;
+  color: #000;
+  font-size: 14px;
+}
+
+.detail-desc .desc-section .description{
+  text-align: justify;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow:clip;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.detail-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-menu .detail-menu-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.detail-menu .detail-menu-wrapper .menu-foods{
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow:clip;
+}
+
+.detail-menu .detail-menu-wrapper .menu-foods h2{
+  font-size: 24px;
+  color: #1C6758;
+  font-weight: 800  ;
+}
+
+.detail-menu .detail-menu-wrapper .menu-drinks .drink-list{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow:clip;
+}
+
+.detail-menu .detail-menu-wrapper .menu-drinks h2 {
+  font-size: 24px;
+  color: #1C6758;
+  font-weight: 800  ;
+}
+
+.detail-review{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  width: 100% ;
+  height: 100%; 
+}
+
+.detail-review .review-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.detail-review .review-wrapper .review-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #1C6758;
+  padding: 0 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.detail-review .review-wrapper .review-card h3 {
+  color: #000;
+}
+
+.detail-review .review-wrapper .review-card .review-date {
+  border-bottom: 1px solid #1C6758;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+  .detail-review .review-wrapper .review-card{
+    width: 100%;
+  }
+}
+
+/* Like Button */
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* footer */
+.footer {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 8%;
+  background-color: #1C6758;
+  font-size: 18px;
+  font-weight: 600;
+  color: #EEF2E6;
+}
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  padding: 5px;
+  background-color: #3D8361;
+  color: white;
+  z-index: 100;
+  display: inline-block;
+  min-width: 44px;
+  min-width: 44px;
+  text-align: center;
+  align-content: center;
+}
+
+.skip-link:focus {
+  top: 0;
+}
